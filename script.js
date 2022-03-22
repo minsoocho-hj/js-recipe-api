@@ -1,5 +1,3 @@
-// card
-
 const recipeCategories = document.querySelector(".recipe-categories");
 const recipeCategory = document.querySelectorAll(".recipe-category");
 const recipeCard = document.querySelector(".recipe-card");
@@ -8,7 +6,7 @@ const recipeBtn = document.querySelector(".btn-recipe");
 const searchInput = document.querySelector(".search-form");
 const searchBtn = document.querySelector(".search-btn");
 
-url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast";
+let url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast";
 let recipes = [];
 let recipeCardHTML = "";
 
@@ -16,14 +14,12 @@ const fetchAPI = () => {
   fetch(url)
     .then((resp) => resp.json())
     .then(function (data) {
-      console.log(data);
       recipes = data.meals;
-      console.log(recipes);
       if (recipes) {
         if (recipes.length > 0) {
           renderRecipeCard();
         } else {
-          console.log("no results");
+          renderError();
         }
       } else {
         renderError();
@@ -86,9 +82,9 @@ recipeCard.addEventListener("click", (event) => {
 
 const renderError = () => {
   recipeCardHTML = "";
-  console.log("something has occured....");
+  console.log("something has occurred....");
   recipeCardHTML += `<div class="alert alert-danger text-align w-100" role="alert">
-  There are no results that match your search.
-</div>`;
+                      There are no results that match your search.
+                      </div>`;
   recipeCardsSection.innerHTML = recipeCardHTML;
 };

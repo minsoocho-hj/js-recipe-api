@@ -1,3 +1,4 @@
+/* reset css */
 * {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -6,6 +7,14 @@
 a {
   text-decoration: none;
   color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+button {
+  border-style: none;
 }
 
 body {
@@ -84,12 +93,14 @@ form {
 }
 
 /* recipe card */
+
 .recipe-cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .recipe-card {
   display: flex;
   flex-direction: column;
@@ -107,6 +118,7 @@ form {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 .recipe-card img {
   width: 100%;
   height: 190px;
@@ -123,13 +135,114 @@ form {
 }
 
 .recipe-desc p {
+  width: 250px;
+  flex-shrink: 1;
   margin: 0;
   font-weight: 600;
   font-size: 16px;
 }
 
-/* @media only screen and (max-width: 800px) {
-  .search-form {
-    margin: 0 20px;
-  }
-} */
+.recipe-desc button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  background-color: rgb(211, 166, 100, 0.3);
+  border-radius: 10px;
+}
+.recipe-desc button:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* recipe modal */
+
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: black;
+  background: #fff;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  width: 60%;
+  height: 90%;
+  overflow-y: scroll;
+  display: none;
+  padding: 5rem 15rem;
+  box-shadow: 0px 4px 12px rgba(90, 90, 90, 0.17);
+  text-align: center;
+}
+
+.show-recipe {
+  display: block;
+}
+
+.meal-details h2 {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+.recipe-category-name {
+  color: green;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.recipe-instruct h3 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  margin-bottom: 2rem;
+}
+
+.recipe-instruct p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.recipe-close-btn {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  height: 42px;
+  width: 42px;
+  color: red;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(90, 90, 90, 0.17);
+}
+
+.recipe-link {
+  cursor: pointer;
+}
+
+.recipe-link:hover {
+  opacity: 0.7;
+}
+
+.recipe-link p {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+}
+
+.recipe-link img {
+  width: 80%;
+  height: 500px;
+  object-fit: cover;
+}

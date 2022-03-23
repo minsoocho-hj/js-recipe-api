@@ -20,6 +20,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- Navbar & category -->
       <div class="row">
         <div class="col-12">
           <section class="title-section">
@@ -38,6 +39,7 @@
           </section>
         </div>
       </div>
+      <!-- search bar -->
       <div class="row">
         <div class="col-lg-12">
           <form class="form-inline my-2 my-lg-0 d-flex">
@@ -53,9 +55,20 @@
           </form>
         </div>
       </div>
-
+      <!-- recipe cards-->
       <div class="row">
         <section class="recipe-cards mt-5"></section>
+      </div>
+      <!-- recipe modal -->
+      <div class="meal-details">
+        <button
+          type="button"
+          class="btn recipe-close-btn"
+          id="recipe-close-btn"
+        >
+          <span>X</span>
+        </button>
+        <div class="meal-details-content"></div>
       </div>
     </div>
     <script src="./script.js"></script>

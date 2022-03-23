@@ -14,7 +14,7 @@
 ### Tech stacks 💪
 
 - html
-- css[https://yori-js.netlify.app/](https://yori-js.netlify.app/)
+- css
 - Javascript
 - Bootstrap
 - postman
